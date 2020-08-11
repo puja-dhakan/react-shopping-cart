@@ -12,3 +12,8 @@ Add the files to commit - git add <file-name> (if you want to add all the file -
 # Step 4
 Commit the file - git commit -m "<commit message>"
 
+# Step 5
+git push
+
+# Step 6
+git push --set-upstream origin filter-component

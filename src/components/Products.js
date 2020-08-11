@@ -6,20 +6,24 @@ export default class  extends Component {
         return (
             <div>
                 <ul className="products">
-                    {this.props.products.map(products => (
-                        <li key={products._id}>
+                    {this.props.products.map((product) => (
+                        <li key={product._id}>
                             <div className="product">
-                                <a href={"#" + products._id}>
-                                    <img src={products.image} alt="product.title"></img>
+                                <a href={"#" + product._id}>
+                                    <img src={product.image} alt="product.title"></img>
                                     <p>
-                                        {products.title}
+                                        {product.title}
                                     </p>
                                 </a>
                                 <div className="product-price">
                                     <div>
-                                        {formatCurrency (products.price)}
+                                        {formatCurrency (product.price)}
                                     </div>
-                                    <button className="button primary">
+                                    <button 
+                                    onClick = {() => this.props.addToCart
+                                        (product)} 
+                                    className="button primary">
+                      
                                         Add To Cart
                                     </button>
                                 </div>
@@ -28,6 +32,6 @@ export default class  extends Component {
                     ))}
                 </ul>
             </div>
-        )
+        );
     }
 }
