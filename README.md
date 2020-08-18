@@ -17,3 +17,6 @@ git push
 
 # Step 6
 git push --set-upstream origin filter-component
+
+# To start Mongodb
+sudo service mongod start
