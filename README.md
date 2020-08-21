@@ -20,3 +20,9 @@ git push --set-upstream origin filter-component
 
 # To start Mongodb
 sudo service mongod start
+
+# To check if server if running:
+ps -ax | grep node
+
+# To kill server
+kill -9 <application-number>
